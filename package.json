@@ -1,0 +1,24 @@
+{
+  "name": "feng",
+  "version": "1.0.0",
+  "description": "\"看风景如画！\"",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dreamapplehappy/feng.git"
+  },
+  "author": "dreamapple",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dreamapplehappy/feng/issues"
+  },
+  "homepage": "https://github.com/dreamapplehappy/feng",
+  "dependencies": {
+    "ejs": "^2.3.1",
+    "express": "^3.4.8",
+    "avoscloud-sdk":"latest"
+  }
+}

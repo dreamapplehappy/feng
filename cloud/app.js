@@ -9,8 +9,14 @@ app.use(express.bodyParser());    // 读取请求 body 的中间件
 
 // 使用 Express 路由 API 服务 /hello 的 HTTP GET 请求
 app.get('/hello', function(req, res) {
-  res.render('hello', { message: 'Congrats, you just set up your app!' });
+  res.render('hello');
+});
+
+app.get('/', function(req, res){
+	res.send("Hello World");
 });
 
 // 最后，必须有这行代码来使 express 响应 HTTP 请求
 app.listen();
+
+// app.listen(1337, '127.0.0.1');
