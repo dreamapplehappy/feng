@@ -1,6 +1,7 @@
 // 在 Cloud code 里初始化 Express 框架
 var express = require('express');
 var app = express();
+var path = require('path');
 var routes = require('cloud/routes/index');
 
 // App 全局配置
