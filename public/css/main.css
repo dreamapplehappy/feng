@@ -22,7 +22,7 @@ register
 div.register{
 	width: 100%;
 	height: 100%;
-	background-image: url("images/register.jpg");
+	background-image: url("/images/register.jpg");
 }
 .form-register{
 	float: right;
@@ -36,14 +36,3 @@ div.register{
 .form-register .input-group-addon{
 	opacity: 0.6;
 }
-
-
-FDD65F
-
-5EE43B
-
-772EE4
-
-FD8980
-
-3CDEFB
