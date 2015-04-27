@@ -36,3 +36,9 @@ div.register{
 .form-register .input-group-addon{
 	opacity: 0.6;
 }
+/*
+navbar
+*/
+.navbar{
+	margin-bottom: 0px !important;
+}
