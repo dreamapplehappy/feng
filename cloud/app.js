@@ -13,6 +13,8 @@ app.get('/hello', routes.hello);
 app.get('/', routes.index);
 app.get('/user/register', routes.register);
 
+app.post('/user/handleRegister', routes.handleRegister);
+
 
 // 最后，必须有这行代码来使 express 响应 HTTP 请求
 app.listen();
