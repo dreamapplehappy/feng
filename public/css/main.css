@@ -22,7 +22,7 @@ register
 div.register{
 	width: 100%;
 	height: 100%;
-	background-image: url("/images/register.jpg");
+	background-image: url("images/register.jpg");
 }
 .form-register{
 	float: right;
