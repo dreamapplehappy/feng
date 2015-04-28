@@ -55,12 +55,15 @@ div.login{
 	float: right;
 	width: 360px;
 	margin-right: 5%;
-	margin-top: 10%;
+	margin-top: 8%;
 }
 .form-login .form-control{
 	opacity: 0.6;
 }
 .form-login .input-group-addon{
+	opacity: 0.6;
+}
+.form-login .form-group button{
 	opacity: 0.6;
 }
 
