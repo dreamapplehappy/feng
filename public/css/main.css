@@ -43,5 +43,11 @@ navbar
 	margin-bottom: 0px !important;
 	background-image: url("/images/nav.png") repeat-x !important;
 }
+.navbar .container-fluid{
+	background-image: url("/images/nav.png") repeat-x !important;
+}
+.navbar .container-fluid .collapse{
+	background-image: url("/images/nav.png") repeat-x !important;
+}
 
 58B658
