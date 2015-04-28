@@ -43,7 +43,7 @@ exports.handleLogin = function(req, res, next){
 	var username = req.param('username');
 	var password = req.param('password');
 	AV.User.logIn(username, password).then(function() {
-      res.redirect('/');
+      res.render('index', {user: "电工钳用户登录成功！"});
     },function(error) {
       res.render('index',{user: error});
   });
