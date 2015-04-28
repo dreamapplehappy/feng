@@ -6,7 +6,7 @@ a:hover{
 sideBar
 */
 .st-container{
-	background-color: #3CDEFB;
+	background-color: #FFFFFF;
 	/*background-image: url("../images/bg.jpg") !important;*/
 }
 .st-menu{
@@ -41,4 +41,7 @@ navbar
 */
 .navbar{
 	margin-bottom: 0px !important;
+	background-image: url("/images/nav.png") repeat-x !important;
 }
+
+58B658

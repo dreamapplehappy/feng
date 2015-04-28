@@ -24,7 +24,7 @@ exports.login = function(req, res, next){
 
 exports.logout = function(req, res) {
     AV.User.logOut();
-    res.redirect('/user/register');
+    res.redirect('/user/login');
 }
 
 exports.handleRegister = function(req, res, next){
