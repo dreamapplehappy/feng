@@ -40,7 +40,9 @@ exports.handleRegister = function(req, res, next){
 }
 
 exports.handleLogin = function(req, res, next){
-	AV.User.logIn(req.body.username, req.body.password).then(function() {
+	var username = req.param('username');
+	var password = req.param('password');
+	AV.User.logIn(username, password).then(function() {
       res.redirect('/');
     },function(error) {
       res.redirect('/user/login');
