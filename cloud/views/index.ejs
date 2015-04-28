@@ -10,7 +10,20 @@
 			<%=  user %>
 		<% } else {%>
 			user undefined!
+		<% } %>	
+<hr >
+		<% if(msg !== 'undefined'){ %>
+			<%=  msg %>
+		<% } else {%>
+			msg undefined!
 		<% } %>		
+<hr >
+		<% var currentUser = AV.User.current(); %>
+		<% if (currentUser) { %>
+		    <%= currentUser %> Hello!
+		<% } else { %>
+			World!
+		<% } %>
 		<% include layouts/footer.ejs %>
 	</body>
 </html>

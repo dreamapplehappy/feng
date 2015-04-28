@@ -42,20 +42,23 @@ exports.handleRegister = function(req, res, next){
 exports.handleLogin = function(req, res, next){
 	var username = req.param('username');
 	var password = req.param('password');
-	AV.User.logIn(username, password).then(function() {
-      res.render('index', {user: "电工钳用户登录成功！"});
+	AV.User.logIn(username, password).then(function(currentUser) {
+      res.render('index', {msg: currentUser});
     },function(error) {
-      res.render('index',{user: error});
+      res.render('index',{msg: error});
   });
 }
 
 exports.index = function(req, res) {
     if (req.AV.user) {
       res.render('index', {user: req.AV.user});
+    } else if(req.AV){
+    	res.render('index', {user: req.AV});
     } else {
       // res.redirect('/user/login');
       res.render('index', {user: "没有当前用户"});
     }
+
 }
 
 exports.hello = function(req, res){
