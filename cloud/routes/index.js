@@ -27,6 +27,18 @@ exports.logout = function(req, res) {
     res.redirect('/user/login');
 }
 
+exports.userinfo = function(req, res) {
+	var currentUser = AV.User.current();
+	if(currentUser !== null){
+		res.render('userinfo', {currentUser: currentUser.attributes});
+	}
+	else{
+		res.render('userinfo', {currentUser: null});
+	}
+}
+
+
+//post
 exports.handleRegister = function(req, res, next){
 	var username = req.param('username');
 	var phone = req.param('phone');

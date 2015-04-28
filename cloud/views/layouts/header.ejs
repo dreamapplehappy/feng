@@ -27,7 +27,7 @@
 								<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 									<ul class="nav navbar-nav">
 										<% if(currentUser !== null) {%>
-											<li><a href="/user/myself"><%= currentUser.username %></a></li>
+											<li><a href="/user/userinfo"><%= currentUser.username %></a></li>
 											<li><a href="/user/logout">登出</a></li>
 										<% }else {%>
 											<li><a href="/user/register">注册</a></li>
