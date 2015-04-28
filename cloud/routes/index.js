@@ -54,6 +54,7 @@ exports.index = function(req, res) {
       res.render('index', {user: req.AV.user});
     } else {
       // res.redirect('/user/login');
+      res.render('index', {user: "没有当前用户"});
     }
 }
 
