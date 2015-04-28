@@ -6,6 +6,10 @@ exports.register = function(req, res, next){
 	res.render('register');
 }
 
+exports.login = function(req, res, next){
+	res.render('login');
+}
+
 exports.handleRegister = function(req, res, next){
 	var username = req.param('username');
 	var phone = req.param('phone');
@@ -28,6 +32,14 @@ exports.handleRegister = function(req, res, next){
 		}
 	});
 			
+}
+
+exports.handleLogin = function(req, res, next){
+	AV.User.logIn(req.body.username, req.body.password).then(function() {
+      res.redirect('/');
+    },function(error) {
+      res.redirect('/user/login');
+  });
 }
 
 exports.index = function(req, res) {
