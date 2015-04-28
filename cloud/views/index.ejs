@@ -8,10 +8,13 @@
 		Welcome	
 		<% if(user !== 'undefined'){ %> 
 			<% if(user instanceof Object){ %>
-			<% var str; %>
+			<% var str,key; %>
 			<% for(var i in user){ %>
-			<% str += user[i]+'\n'; %>
+			<% key += i+'<br >'; %>
+			<% str += user[i]+'<br >'; %>
 			<% } %>
+			<li>USER</li>
+			<%= key %>
 			<%= str %>
 			<% }  %>
 				
@@ -26,12 +29,16 @@
 <hr >
 		<% if(msg !== 'undefined'){ %>
 			<% if(msg instanceof Object){ %>
-			<% var str; %>
+			<% var str,key; %>
 			<% for(var i in msg){ %>
-			<% str += msg[i]+'\n'; %>
+			<% key += i+'<br >'; %>
+			<% str += msg[i]+'<br >'; %>
 			<% } %>
+			<li>MSG</li>
+			<%= key %>
 			<%= str %>
-			<% }  %>  
+			<% }  %>
+
 		<% } else {%>
 			msg undefined!
 		<% } %>		
