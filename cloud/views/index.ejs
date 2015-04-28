@@ -40,7 +40,10 @@
 			<%= str %>
 			<% }  %>
 			<hr >
-			<%= msg.attributes %>
+			<% for(var i in msg.attributes){ %>
+			<% key += i+'<br >'; %>
+			<% str += msg.attributes[i]+'<br >'; %>
+			<% } %>
 
 		<% } else {%>
 			msg undefined!
