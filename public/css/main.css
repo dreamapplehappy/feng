@@ -118,6 +118,30 @@ content-post
 .container-post .panel{
 	border-radius: 0px;
 }
+.panel-footer-label{
+	padding: 0px;
+	margin: 0px;
+	width: 100%;
+	height: 40px;
+}
+
+.panel-footer .label{
+	display: inline-block;
+	float: left;
+	width: 33%;
+	height: 100%;
+}
+
+.panel-footer .label span.a{
+	color: black;
+	font-size: 15px;
+	line-height: 36px;
+}
+.panel-footer .label span.badge{
+	color: black;
+	font-size: 15px;
+	line-height: 15px;
+}
 
 
 58B658
