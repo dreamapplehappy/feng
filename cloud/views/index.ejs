@@ -5,50 +5,7 @@
 	</head>
 	<body>
 		<% include layouts/header.ejs %>
-		Welcome	
-		<% if(user !== 'undefined'){ %> 
-			<% if(user instanceof Object){ %>
-			<% var str,key; %>
-			<% for(var i in user){ %>
-			<% key += i+'<br >'; %>
-			<% str += user[i]+'<br >'; %>
-			<% } %>
-			<li>USER</li>
-			<%= user%>
-			<%= key %>
-			<%= str %>
-			<% }  %>
-				
-				
-					
-				
-
-			
-		<% } else {%>
-			user undefined!
-		<% } %>	
-<hr >
-		<% if(msg !== 'undefined'){ %>
-			<% if(msg instanceof Object){ %>
-			<% var str,key; %>
-			<% for(var i in msg){ %>
-			<% key += i+'<br >'; %>
-			<% str += msg[i]+'<br >'; %>
-			<% } %>
-			<li>MSG</li>
-			<%= key %>
-			<%= str %>
-			<% }  %>
-			<hr >
-			<% for(var i in msg.attributes){ %>
-			<% key += i+'<br >'; %>
-			<% str += msg.attributes[i]+'<br >'; %>
-			<% } %>
-
-		<% } else {%>
-			msg undefined!
-		<% } %>		
-<hr >
+			<%= currentUser %>
 		<% include layouts/footer.ejs %>
 	</body>
 </html>

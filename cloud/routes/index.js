@@ -43,22 +43,21 @@ exports.handleLogin = function(req, res, next){
 	var username = req.param('username');
 	var password = req.param('password');
 	AV.User.logIn(username, password).then(function(currentUser) {
-      res.render('index', {msg: currentUser, user: "KK"});
+      res.redirect('/');
+      console.log(currentUser);
     },function(error) {
-      res.render('index',{msg: error, user: "KK"});
+      console.log(error);
   });
 }
 
 exports.index = function(req, res) {
-    if (req.AV.user) {
-      res.render('index', {user: req.AV.user, msg: "KK req.AV.user"});
-    } else if(req.AV){
-    	res.render('index', {user: req.AV, msg: "KK req.AV"});
-    } else {
-      // res.redirect('/user/login');
-      res.render('index', {user: "没有当前用户"});
+	var currentUser = AV.User.current();
+    if(currentUser){
+    	res.render('index', {currentUser: currentUser});
     }
-
+    else{
+    	res.render('index', {currentUser: "none"});
+    }
 }
 
 exports.hello = function(req, res){
