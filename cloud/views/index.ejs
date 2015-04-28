@@ -7,15 +7,31 @@
 		<% include layouts/header.ejs %>
 		Welcome	
 		<% if(user !== 'undefined'){ %> 
-			<li><%= user.username %></li> 
-			<li><%= user.password %></li>  
+			<% if(user instanceof Object){ %>
+			<% var str; %>
+			<% for(var i in user){ %>
+			<% str += user[i]+'\n'; %>
+			<% } %>
+			<%= str %>
+			<% }  %>
+				
+				
+					
+				
+
+			
 		<% } else {%>
 			user undefined!
 		<% } %>	
 <hr >
 		<% if(msg !== 'undefined'){ %>
-			<li><%= msg.username %></li> 
-			<li><%= msg.password %></li>  
+			<% if(msg instanceof Object){ %>
+			<% var str; %>
+			<% for(var i in msg){ %>
+			<% str += msg[i]+'\n'; %>
+			<% } %>
+			<%= str %>
+			<% }  %>  
 		<% } else {%>
 			msg undefined!
 		<% } %>		
