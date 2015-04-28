@@ -5,14 +5,7 @@
 	</head>
 	<body>
 		<% include layouts/header.ejs %>
-			<% var key,str; %>
-			<% for(var i in currentUser) { %>
-				<% key += i+"="; %>
-				<% str += currentUser[i]+"="; %>
-			<% } %>
-			<%= key %>
-			<%= str %>
-
+			<% include layouts/index.ejs %>
 		<% include layouts/footer.ejs %>
 	</body>
 </html>

@@ -67,5 +67,57 @@ div.login{
 	opacity: 0.6;
 }
 
+/*
+content-post
+*/
+.container-post{
+	margin-top: 10px;
+	height: 206px;
+	padding: 0px;
+	border-top: 6px solid red;
+}
+.container-post .content-left{
+	float: left;
+	width: 36%;
+	height: 200px;
+}
+.container-post .content-images{
+	float: left;
+	width: 28%;
+	height: 200px;
+}
+.container-post .content-images .img{
+	width: 330px;
+	height: 200px;
+}
+.container-post .content-right{
+	float: left;
+	width: 36%;
+	height: 200px;
+}
+.container-post .panel-body{
+	height: 120px;
+}
+.container-post .list-group{
+	border-radius: 0px;
+}
+.container-post .list-group-item{
+	font-size: 12px;
+	line-height: 20px;
+	height: 40px;
+	margin-bottom: 0px;
+}
+.container-post .list-group-item:first-child{
+	border-top-right-radius: 0px;
+	border-top-left-radius: 0px;
+}
+.container-post .list-group-item:last-child{
+	border-bottom-right-radius: 0px;
+	border-bottom-left-radius: 0px;
+}
+.container-post .panel{
+	border-radius: 0px;
+}
+
 
 58B658
