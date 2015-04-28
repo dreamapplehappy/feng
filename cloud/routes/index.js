@@ -45,7 +45,7 @@ exports.handleLogin = function(req, res, next){
 	AV.User.logIn(username, password).then(function() {
       res.redirect('/');
     },function(error) {
-      res.redirect('/user/login');
+      res.render('index',{user: error});
   });
 }
 
