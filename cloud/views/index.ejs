@@ -18,12 +18,6 @@
 			msg undefined!
 		<% } %>		
 <hr >
-		<% var currentUser =  req.AV.user; %>
-		<% if (currentUser) { %>
-		    <%= currentUser %> Hello!
-		<% } else { %>
-			World!
-		<% } %>
 		<% include layouts/footer.ejs %>
 	</body>
 </html>
