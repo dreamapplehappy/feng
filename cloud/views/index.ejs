@@ -18,7 +18,7 @@
 			msg undefined!
 		<% } %>		
 <hr >
-		<% var currentUser = AV.User.current(); %>
+		<% var currentUser =  req.AV.user; %>
 		<% if (currentUser) { %>
 		    <%= currentUser %> Hello!
 		<% } else { %>
