@@ -6,20 +6,16 @@
 	<body>
 		<% include layouts/header.ejs %>
 		Welcome	
-		<% if(user !== 'undefined'){ %>
-			<% user.forEach(function(sUser){ %>  
-			<li><%= sUser.username %></li> 
-			<li><%= sUser.password %></li>  
-			<% }); %>
+		<% if(user !== 'undefined'){ %> 
+			<li><%= user.username %></li> 
+			<li><%= user.password %></li>  
 		<% } else {%>
 			user undefined!
 		<% } %>	
 <hr >
 		<% if(msg !== 'undefined'){ %>
-			<% msg.forEach(function(sUser){ %>  
-			<li><%= sUser.username %></li> 
-			<li><%= sUser.password %></li>  
-			<% }); %>
+			<li><%= msg.username %></li> 
+			<li><%= msg.password %></li>  
 		<% } else {%>
 			msg undefined!
 		<% } %>		
