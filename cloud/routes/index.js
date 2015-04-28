@@ -56,7 +56,7 @@ exports.index = function(req, res) {
     	res.render('index', {currentUser: currentUser.attributes});
     }
     else{
-    	res.render('index', {currentUser: "none"});
+    	res.render('index', {currentUser: null});
     }
 }
 
