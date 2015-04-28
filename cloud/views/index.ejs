@@ -7,13 +7,19 @@
 		<% include layouts/header.ejs %>
 		Welcome	
 		<% if(user !== 'undefined'){ %>
-			<%=  user %>
+			<%=  user.forEach(sUser){ %>
+				<%= sUser.username  %>
+				<%= sUser.password  %>
+			<% } %>
 		<% } else {%>
 			user undefined!
 		<% } %>	
 <hr >
 		<% if(msg !== 'undefined'){ %>
-			<%=  msg %>
+			<%=  msg.forEach(sUser){ %>
+				<%= sUser.username  %>
+				<%= sUser.password  %>
+			<% } %>
 		<% } else {%>
 			msg undefined!
 		<% } %>		

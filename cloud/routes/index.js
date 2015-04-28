@@ -51,9 +51,9 @@ exports.handleLogin = function(req, res, next){
 
 exports.index = function(req, res) {
     if (req.AV.user) {
-      res.render('index', {user: req.AV.user, msg: "KK"});
+      res.render('index', {user: req.AV.user, msg: "KK req.AV.user"});
     } else if(req.AV){
-    	res.render('index', {user: req.AV, msg: "KK"});
+    	res.render('index', {user: req.AV, msg: "KK req.AV"});
     } else {
       // res.redirect('/user/login');
       res.render('index', {user: "没有当前用户"});
