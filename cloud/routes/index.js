@@ -51,7 +51,7 @@ exports.index = function(req, res) {
     if (req.AV.user) {
       res.render('index', {user: req.AV.user});
     } else {
-      res.redirect('/user/login');
+      // res.redirect('/user/login');
     }
 }
 
