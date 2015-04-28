@@ -53,7 +53,7 @@ exports.handleLogin = function(req, res, next){
 exports.index = function(req, res) {
 	var currentUser = AV.User.current();
     if(currentUser){
-    	res.render('index', {currentUser: currentUser});
+    	res.render('index', {currentUser: currentUser.attributes});
     }
     else{
     	res.render('index', {currentUser: "none"});
