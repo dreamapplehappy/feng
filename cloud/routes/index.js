@@ -4,12 +4,22 @@ AV.initialize("1d147hc7zd3oqe3it5azybqph50a3y5fp51f3l9gy14zkfsc", "sswde0nyktisz
 
 exports.register = function(req, res, next){
 	var currentUser = AV.User.current();
-	res.render('register', {currentUser: currentUser.attributes});
+	if(current !== null){
+		res.render('register', {currentUser: currentUser.attributes});
+	}
+	else{
+		res.render('register', {currentUser: null});
+	}
 }
 
 exports.login = function(req, res, next){
 	var currentUser = AV.User.current();
-	res.render('login', {currentUser: currentUser.attributes});
+	if(current !== null){
+		res.render('login', {currentUser: currentUser.attributes});
+	}
+	else{
+		res.render('login', {currentUser: null});
+	}
 }
 
 exports.logout = function(req, res) {
@@ -54,7 +64,13 @@ exports.handleLogin = function(req, res, next){
 
 exports.index = function(req, res) {
 	var currentUser = AV.User.current();
-    res.render('index', {currentUser: currentUser.attributes});
+	if(current !== null){
+		res.render('index', {currentUser: currentUser.attributes});
+	}
+	else{
+		res.render('index', {currentUser: null});
+	}
+    
 }
 
 exports.hello = function(req, res){
