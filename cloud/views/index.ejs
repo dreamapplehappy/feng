@@ -5,7 +5,12 @@
 	</head>
 	<body>
 		<% include layouts/header.ejs %>
-		Welcome			
+		Welcome	
+		<% if(user !== 'undefined'){ %>
+			<%=  user %>
+		<% } else {%>
+			user undefined!
+		<% } %>		
 		<% include layouts/footer.ejs %>
 	</body>
 </html>

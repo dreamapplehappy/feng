@@ -10,6 +10,11 @@ exports.login = function(req, res, next){
 	res.render('login');
 }
 
+exports.logout = function(req, res) {
+    AV.User.logOut();
+    res.redirect('/user/register');
+}
+
 exports.handleRegister = function(req, res, next){
 	var username = req.param('username');
 	var phone = req.param('phone');
@@ -43,7 +48,11 @@ exports.handleLogin = function(req, res, next){
 }
 
 exports.index = function(req, res) {
-  	res.render('index');
+    if (req.AV.user) {
+      res.render('index', {user: req.AV.user});
+    } else {
+      res.redirect('/user/login');
+    }
 }
 
 exports.hello = function(req, res){

@@ -21,6 +21,7 @@ app.get('/hello', routes.hello);
 app.get('/', routes.index);
 app.get('/user/register', routes.register);
 app.get('/user/login', routes.login);
+app.get('/user/logout', routes.logout);
 
 app.post('/user/handleRegister', routes.handleRegister);
 app.post('/user/handleLogin', routes.handleLogin);
