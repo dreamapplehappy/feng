@@ -54,7 +54,7 @@ exports.handleRegister = function(req, res, next){
 
 	user.signUp(null, {
 		success: function(user) {
-			res.redirect("/");
+			res.redirect("/user/login");
 		},
 		error: function(user, error) {
 			console.log("User signUp Error: " + error.code + " " + error.message);
