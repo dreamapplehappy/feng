@@ -13,7 +13,7 @@
 				</div>
 			</div>
 		</div>
-		<a href="#" class="list-group-item list-group-item-info">
+		<a href="#" class="list-group-item">
 			<span>邮箱：</span>
 			<span><%= currentUser.email %></span>
 			<% if(currentUser.emailVerified){ %>
@@ -23,7 +23,7 @@
 			<% } %>
 			<span class="badge">1</span>
 		</a>
-		<a href="#" class="list-group-item list-group-item-info">
+		<a href="#" class="list-group-item">
 			<span>手机：</span>
 			<span><%= currentUser.phone %></span>
 			<% if(currentUser.mobilePhoneVerified){ %>
@@ -33,6 +33,6 @@
 			<% } %>
 			<span>修改</span>
 		</a>
-		<a href="#" class="list-group-item list-group-item-danger">修改密码</a>
+		<a href="#" class="list-group-item">修改密码</a>
 	</div>
 </div>
