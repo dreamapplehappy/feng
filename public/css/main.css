@@ -143,5 +143,52 @@ content-post
 	line-height: 15px;
 }
 
+/*
+userinfo-s1
+*/
+.userinfo-s1{
+	width: 360px;
+	float: left;
+	margin-left: 20px;
+	margin-top: 20px;
+}
+.userinfo-header{
+	height: 130px;
+	padding: 0px;
+}
+.userinfo-header .userimage-img{
+	display: block;
+	width: 120px;
+	height: 120px;
+	margin-top: 5px;
+	margin-left: 5px;
+	border-radius: 5px;
+	float: left;
+}
+.userinfo-header .userinfo-s1-1{
+	display: block;
+	width: 200px;
+	height: 120px;
+	margin-top: 5px;
+	margin-left: 5px;
+	float: left;
+	border-left: 1px solid #CCC;
+}
+.userinfo-s1-1 .username{
+	width: 200px;
+	height: 30px;
+	font-size: 20px;
+	line-height: 30px;
+}
+.userinfo-s1-1 .usersay{
+	width: 200px;
+	height: 100px;
+	padding: 5px;
+	font-size: 10px;
+	line-height: 15px;
+	text-indent: 20px;
+}
+.userinfo-s1-1 .username span{
+	padding-left: 20px;
+}
 
-58B658

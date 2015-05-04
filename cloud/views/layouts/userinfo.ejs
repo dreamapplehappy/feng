@@ -1,9 +1,38 @@
-<%= currentUser.username %>
-<hr />
-<%= currentUser.email %>
-<hr />
-<%= currentUser.phone %>
-<hr />
-<%= currentUser.emailVerified %>
-<hr />
-<%= currentUser.mobilePhoneVerified %>
+<div class="userinfo-s1 panel panel-info">
+	<div class="panel-heading">个人信息</div>
+	<div class="list-group pannel-body">
+		<div class="list-group-item userinfo-header">
+		<img class="userimage-img" src="/images/feng.jpg" alt="">
+			<div class="userinfo-s1-1">
+				<div class="username">
+					<span class="glyphicon glyphicon-user" aria-hidden="true"></span>
+					<span><%= currentUser.username %></span>
+				</div>
+				<div class="usersay">
+					虽然这经常被当作是 JavaScript 的缺点被提及,实现传统的类继承模型是很简单。
+				</div>
+			</div>
+		</div>
+		<a href="#" class="list-group-item list-group-item-info">
+			<span>邮箱：</span>
+			<span><%= currentUser.email %></span>
+			<% if(currentUser.emailVerified){ %>
+			<span>已验证</span>
+			<% }else{ %>
+			<span>未验证</span>
+			<% } %>
+			<span class="badge">1</span>
+		</a>
+		<a href="#" class="list-group-item list-group-item-info">
+			<span>手机：</span>
+			<span><%= currentUser.phone %></span>
+			<% if(currentUser.mobilePhoneVerified){ %>
+			<span>已验证</span>
+			<% }else{ %>
+			<span>未验证</span>
+			<% } %>
+			<span>修改</span>
+		</a>
+		<a href="#" class="list-group-item list-group-item-danger">修改密码</a>
+	</div>
+</div>
