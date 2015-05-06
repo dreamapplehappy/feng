@@ -1,1 +1,51 @@
-HHHHHHHHHHH
+	<div class="userwrite container">
+	<form action="/" method="POST" class="form-register">
+		<h2 class="form-userwrite-heading">写文章</h2>
+		<input type="hidden" name="_csrf" value="..."/>
+
+		<div class="form-group">
+			<input type="file" multiple=true id="imagefile" name="imagefile" class="form-control">
+		</div>
+
+		<div class="form-group">
+			<div class="input-group">
+				<span class="input-group-addon" id="basic-addon1">
+					<span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span>
+					<span>位置</span>
+				</span>
+				<input type="text" id="place" name="place" class="form-control" placeholder="西藏" aria-describedby="basic-addon1">
+			</div>
+		</div>
+		
+		<div class="form-group">
+			<div class="input-group">
+				<span class="input-group-addon" id="basic-addon2">
+					一句话感悟
+				</span>
+				<input type="txt" id="oneword" name="oneword" class="form-control" placeholder="终身难忘的地方！" aria-describedby="basic-addon2">
+			</div>
+		</div>
+
+		<div class="form-group">
+			<div class="input-group">
+				<span class="input-group-addon" id="basic-addon3">
+					<span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+					<span class="">推荐指数</span>
+				</span>
+				<input type="text" id="phone" name="phone" class="form-control" placeholder="填写数字1-5" aria-describedby="basic-addon3">
+			</div>
+		</div>
+
+		<div class="form-group">
+			<div class="input-group">
+			<span class="input-group-addon">详细的描述</span>
+				 <textarea class="form-control custom-control" rows="6" style="resize:none" placeholder="后面可以考虑使用百度Ueditor"></textarea>     
+			</div>
+		</div>
+		<hr />
+		<div class="form-group">
+			<button type="reset" class="btn btn-warning">重置</button>
+			<button type="submit" class="btn btn-primary">完成</button>
+		</div>
+	</form>	
+</div>

@@ -192,3 +192,22 @@ userinfo-s1
 	padding-left: 20px;
 }
 
+/*
+userwrite
+*/
+.userwrite{
+	margin: 0 auto;
+	width: 1000px;
+}
+.userwrite .form-group{
+	width: 1000px;
+}
+.file-caption{
+	padding-top: 0px;
+}
+.file-caption .file-caption-name{
+	display: block;
+	line-height: 27px;
+	overflow: hidden;
+}
+
