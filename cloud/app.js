@@ -23,6 +23,7 @@ app.get('/user/register', routes.register);
 app.get('/user/login', routes.login);
 app.get('/user/logout', routes.logout);
 app.get('/user/userinfo', routes.userinfo);
+app.get('/user/userwrite', routes.userwrite);
 
 app.post('/user/handleRegister', routes.handleRegister);
 app.post('/user/handleLogin', routes.handleLogin);

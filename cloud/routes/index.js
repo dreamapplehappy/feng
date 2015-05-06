@@ -37,6 +37,16 @@ exports.userinfo = function(req, res) {
 	}
 }
 
+exports.userwrite = function(req, res) {
+	var currentUser = AV.User.current();
+	if(currentUser !== null){
+		res.render('userwrite', {currentUser: currentUser.attributes});
+	}
+	else{
+		res.render('userwrite', {currentUser: null});
+	}
+}
+
 
 //post
 exports.handleRegister = function(req, res, next){
